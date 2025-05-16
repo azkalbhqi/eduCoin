@@ -4,6 +4,7 @@ import { FlipText } from "@/components/magicui/flip-text";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
 import { RippleButton } from "@/components/magicui/ripple-button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -23,7 +24,9 @@ export default function Home() {
               Mulai Sekarang
             </InteractiveHoverButton>
             <RippleButton>
-              Pelajari Lebih Lanjut
+              <Link href='/project'>
+                Pelajari Lebih Lanjut
+              </Link>
             </RippleButton>
           </div>
         </div>
