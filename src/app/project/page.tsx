@@ -27,7 +27,7 @@ const Circle = forwardRef<
 
 Circle.displayName = "Circle";
 
-export default function CaraKerjaPage({ className }: { className?: string })
+export default function CaraKerjaPage()
  {
   const containerRef = useRef<HTMLDivElement>(null);
   const div1Ref = useRef<HTMLDivElement>(null);
@@ -98,7 +98,7 @@ export default function CaraKerjaPage({ className }: { className?: string })
     <div
       className={cn(
         "relative flex h-screen w-full items-center justify-center overflow-hidden p-10",
-        className,
+
       )}
       ref={containerRef}
     >
@@ -169,6 +169,24 @@ export default function CaraKerjaPage({ className }: { className?: string })
         toRef={div7Ref}
         duration={5}
       />
+    </div>
+    <div className="h-screen bg-white py-16 px-4 flex items-center justify-center">
+      <div className="max-w-3xl w-full">
+        <MagicCard className="p-6 md:p-8">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            EduCoin Menggunakan Proof of Authority (PoA)
+          </h1>
+          <p className="text-gray-700 leading-relaxed">
+            Sistem EduCoin berjalan di atas blockchain yang menggunakan mekanisme konsensus <strong>Proof of Authority (PoA)</strong>.
+            PoA memungkinkan transaksi yang cepat, murah, dan dapat dipercaya, karena hanya validator terotorisasi seperti institusi pendidikan
+            dan yayasan beasiswa yang dapat memvalidasi transaksi.
+            <br /><br />
+            Tidak seperti Proof of Work (PoW) yang mengandalkan kekuatan komputasi, atau Proof of Stake (PoS) yang bergantung pada kepemilikan token,
+            PoA berfokus pada reputasi dan otoritas dari validator. Ini menjadikannya solusi ideal untuk sistem distribusi beasiswa yang
+            memerlukan kontrol, transparansi, dan efisiensi tinggi.
+          </p>
+        </MagicCard>
+      </div>
     </div>
     
   </>
